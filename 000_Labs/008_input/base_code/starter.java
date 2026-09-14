@@ -34,13 +34,15 @@ class starter {
 
 		String feedback;
 
-		if (ans == "$1.50"); {
+		if (ans.equals("$1.50")) {
 			feedback = "you know how much a buck fifty is.";
 
-		}
-		else {
+		} else if (ans.equals("one dollar and fifty cents")){
+			feedback = "you know how much a buck fifty is.";
+		} else {
 			feedback = "you don't know how much a buck fifty is.";
 		}
+		
 
 		
 
