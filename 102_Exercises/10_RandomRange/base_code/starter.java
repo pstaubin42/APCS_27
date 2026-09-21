@@ -8,8 +8,21 @@ import java.util.Scanner;
 
 class starter {
 	public static void main(String args[]) {
-		// the string "I love to learn coding remotely." will appear in
-		// the command window when you compile and run this program.
-		System.out.print("I love to learn coding remotely."); 
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter an integer to be the lower end of your range");
+		int low = sc.nextInt();
+		System.out.println("Enter an integer to be the upper integer of your range");
+		int upp = sc.nextInt();
+		int x = upp - low;
+
+		System.out.println("");
+		System.out.println("Here are five random numbers in your range.");
+		System.out.println((int)(low+(x*Math.random())));
+		System.out.println((int)(low+(x*Math.random())));
+		System.out.println((int)(low+(x*Math.random())));
+		System.out.println((int)(low+(x*Math.random())));
+		System.out.println((int)(low+(x*Math.random())));
+
 	}
 }
