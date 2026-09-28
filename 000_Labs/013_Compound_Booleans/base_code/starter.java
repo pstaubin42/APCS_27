@@ -14,34 +14,43 @@ class starter {
 		int y = sc.nextInt();
 		int z = sc.nextInt();
 
+		boolean a = x>y; //y<x
+		boolean b = x>z; //z<x
+		boolean c = y>x; //x<y
+		boolean d = y>z; //z<y
+		boolean e = z>x; //x<z
+		boolean f = z>y; //y<z
 		
-		if ((x>y) && (x>z)) {
-			int large = x;
+		int large = 0;
+		int small = 0;
+
+		if (a && b) {
+			large = x;
 		}
 
-		if ((y>x) && (y>z)) {
-			int large = y;
+		if (c && d) {
+			large = y;
 		}
 
-		if ((z>x) && (z>y)){
-			int large = z;
+		if (e && f){
+			large = z;
 		}
 
 
 
 
-		if ((x<y) && (x<z)) {
-			int small = x;
+		if (c && e) {
+			small = x;
 		}
 
-		if ((y<x) && (y<z)) {
-			int small = y;
+		if (a && f) {
+			small = y;
 		}
 
-		if ((z<x) && (z<y)){
-			int small = z;
+		if (b && d){
+			small = z;
 		} 
-
-		System.out.println("The largest number is " )
+		
+		System.out.println("The largest number is " + large + " and the smallest number is " + small +".");
 	}
 }
