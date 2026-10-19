@@ -14,7 +14,71 @@ class starter {
 
 	public static void main(String args[]) throws InterruptedException {
 		
+		Scanner sc = new Scanner(System.in);
 
+		
+
+		
+		populateArrayList();
+		String sentence = getSentence();
+
+		System.out.println("Press enter to begin typing");
+		sc.nextLine();
+		countdown();
+
+		System.out.println(sentence); //sentence to type
+		startTimer();
+		String input = sc.nextLine();
+
+		double thyme = endTimer();
+		int count = wordsInSentence(input);
+		double minutes = thyme / 60.0;
+		double wpm = count/minutes;
+		double bestTime = thyme;
+		double bestSpeed = wpm;
+
+		System.out.println("Best Time: " + (int)thyme + "s");
+		System.out.println("Best Speed: " + (int)wpm + " WPM");
+		
+		System.out.println("Try sentence again? (y/n)");
+		String choose = sc.nextLine();
+		while (choose.equals("y")) {
+			
+			
+			
+			countdown();
+			System.out.println(sentence);
+			startTimer();
+			
+
+			input = sc.nextLine();
+
+			thyme = endTimer();
+			count = wordsInSentence(input);
+			minutes = thyme/60.0;
+			wpm = count/minutes;
+
+			roundToTenth(thyme);
+		
+
+			
+			bestTime = Math.min(thyme, bestTime);
+			bestSpeed = Math.min(bestSpeed, wpm);
+			thyme = roundToTenth(thyme);
+			bestTime = roundToTenth(bestTime);
+			
+
+
+			System.out.println("Time: " + (int)thyme + "s");
+			System.out.println("Best Time: " + (int)bestTime + "s");
+			System.out.println("Speed: " +  (int)wpm + " WPM");
+			System.out.println("Best Speed " + (int)bestSpeed + " WPM");
+
+
+			System.out.println("Try sentence again? ");
+			choose = sc.nextLine();
+		}
+		 
 		
 	}
 
@@ -105,6 +169,12 @@ class starter {
 			typed = typed.substring(1);
 		}
 		return errors;
+	}
+
+	public static double roundToTenth(double a) {
+		a = (int)(a*10);
+		a = a/10;
+		return a;
 	}
 
 }
