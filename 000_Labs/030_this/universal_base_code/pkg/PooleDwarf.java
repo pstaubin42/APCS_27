@@ -18,8 +18,12 @@ public class PooleDwarf {
 	}
 
 	public PooleDwarf(String name, int age){
-		// Complete this constructor
+		this.name = name;
+		this.age = age;
 	}
+
+	
+
 
 	/*	Accessor Methods */
 	public String getName(){

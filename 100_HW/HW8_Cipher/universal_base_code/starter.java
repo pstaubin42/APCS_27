@@ -25,7 +25,7 @@ class starter {
 		} else if (choose == 2) {
 			System.out.println("enter message");
 			String message = sc.nextLine();
-			System.out.println("ente key" );
+			System.out.println("enter key" );
 			int key = sc.nextInt();
 
 			System.out.println("encoded message: " + Cipher.keyedEncode(message, key));

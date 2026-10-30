@@ -15,11 +15,64 @@ public class Spiderman {
 	// String Actor, int Age constructor! 	Villain Unknown
 	// String Actor, int Age, String Villain constructor!		
 	
+	public Spiderman(){
+		actor = "unknown";
+		age = 0;
+		villan = "unknown";
+
+	}
+
+	public Spiderman(String a;){
+		actor = a;
+		age = 0;
+		villan = "unknown";
+
+	}
+
+	public Spiderman(int a) {
+		actor = "unknown";
+		age = a;
+		villan = "unknown";
+	}
+
+	public Spiderman(String a, int b) {
+		actor = a;
+		age = b;
+		villan = "unknown";
+	}
+
+	public Spiderman(String a, int b, String c){
+		actor = a;
+		age = b;
+		villan = c;
+	}
+
 	// ---------------------------------------
 	// Create accessor and mutator methods for actor, age, and villain (6 total methods)
 	// Ex: getAge and setAge
-	
+	public String getActor(){
+		return actor;
+	}
 
+	public int getAge(){
+		return age;
+	}
+
+	public String getVillan(){
+		return villan;
+	}
+
+	public void setActor(String a){
+		actor = a;
+	}
+
+	public void setAge(int a) {
+		age = a;
+	}
+
+	public void setVillan(String a) {
+		villan = a;
+	}
 
 	// ---------------------------------------
 	public void fight(){

@@ -33,7 +33,7 @@ class starter {
 		System.out.println("----------ACCOUNT 3 ACTIONS----------");
 		System.out.println(c.getOwner() + " is trying to withdraw $" + c.getBalance());
 		c.withdraw(c.getBalance());
-		c.checkBalance();
+		c.getBalance();
 		c.closeAccount();
 		c.deposit(1);
 		
