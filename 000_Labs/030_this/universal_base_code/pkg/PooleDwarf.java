@@ -23,6 +23,8 @@ public class PooleDwarf {
 	}
 
 	
+	
+	
 
 
 	/*	Accessor Methods */
@@ -31,20 +33,28 @@ public class PooleDwarf {
 	}
 
 	public int getAge(){
-
+		return age;
 	}
 
 	/*	Mutator Methods	*/
 	public void setName(String nane){
-		// Fix this method
+		this.name = name;
 	}
 	
-	public void setAge(String age){
-		// Fix this method
+	public void setAge(int age){
+		this.age = age;
 	}
 
 	public boolean isSameName(String name){
-		// Complete this method
-	}
+		boolean a;
+		String b = this.name;
+		if(b.equals(name)){
+			a = true;
+		} else {
+			a = false;
+		}
+
+		return a;
+ 	}
 }
 
