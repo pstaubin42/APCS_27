@@ -21,7 +21,10 @@ public class RunningAverage{
     * rating, as described in part (a).
     */
     public void updateAverage(double newVal){
-        /* to be implemented in part (a) */
+        double total = average*count;
+        total += newVal;
+        count ++;
+        average = total/count;
     }
 
 
@@ -32,7 +35,18 @@ public class RunningAverage{
     * Precondition: num > 0
     */
     public int processNewRatings(int num){
-        /* to be implemented in part (b) */
+        
+        int count = 0;
+        int tot = 0;
+        while (count < num) {
+            double a = getNewRating();
+            if (a < 0.0){
+                tot ++;
+            }
+            count ++;
+        }
+
+        return tot;
     }
 
     /** Returns a single numeric rating. */

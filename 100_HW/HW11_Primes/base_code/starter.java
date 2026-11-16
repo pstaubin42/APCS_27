@@ -16,10 +16,11 @@ class starter {
 
 		while (divi > 0) {
 			if(a % divi == 0) {
-				isPrime = true;
+				isPrime = false;
 				break;
 			} else {
-				isPrime = false;
+				isPrime = true;
+				
 			}
 			divi --;
 			
